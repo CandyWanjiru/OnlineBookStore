@@ -9,3 +9,23 @@ body {
 footer {
     margin-top: 50px;
 }
+.card img {
+    height: 300px;
+    object-fit: cover;
+}
+body {
+    font-family: Arial, sans-serif;
+}
+
+.card img {
+    height: 300px;
+    object-fit: cover;
+}
+
+footer {
+    margin-top: 50px;
+}
+.card-img-top {
+    height: 350px;
+    object-fit: cover;
+}
