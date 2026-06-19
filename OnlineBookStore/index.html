@@ -73,19 +73,68 @@
         </div>
     </nav>
 
-    <!-- Hero Section -->
-    <section class="container text-center py-5">
-        <h1 class="display-4">Welcome to Book Haven</h1>
+   <!-- Hero Carousel -->
+<div id="bookCarousel" class="carousel slide" data-bs-ride="carousel">
 
-        <p class="lead">
-            Discover bestselling novels, academic books,
-            and inspiring stories all in one place.
-        </p>
+    <div class="carousel-inner">
 
-        <a href="books.html"
-           class="btn btn-primary btn-lg">
-           Explore Books
-        </a>
+        <div class="carousel-item active">
+            <img src="images/atomic-habits.jpg"
+                 class="d-block w-100"
+                 height="500"
+                 alt="Atomic Habits">
+
+            <div class="carousel-caption d-none d-md-block">
+                <h2>Welcome to Book Haven</h2>
+                <p>Discover books that inspire and transform lives.</p>
+            </div>
+        </div>
+
+        <div class="carousel-item">
+            <img src="images/alchemist.jpg"
+                 class="d-block w-100"
+                 height="500"
+                 alt="The Alchemist">
+
+            <div class="carousel-caption d-none d-md-block">
+                <h2>Explore Great Stories</h2>
+                <p>Find novels, textbooks and self-help books.</p>
+            </div>
+        </div>
+
+        <div class="carousel-item">
+            <img src="images/think-grow-rich.jpg"
+                 class="d-block w-100"
+                 height="500"
+                 alt="Think and Grow Rich">
+
+            <div class="carousel-caption d-none d-md-block">
+                <h2>Learn Something New</h2>
+                <p>Your next favourite book is waiting for you.</p>
+            </div>
+        </div>
+
+    </div>
+
+    <button class="carousel-control-prev"
+            type="button"
+            data-bs-target="#bookCarousel"
+            data-bs-slide="prev">
+
+        <span class="carousel-control-prev-icon"></span>
+
+    </button>
+
+    <button class="carousel-control-next"
+            type="button"
+            data-bs-target="#bookCarousel"
+            data-bs-slide="next">
+
+        <span class="carousel-control-next-icon"></span>
+
+    </button>
+
+</div>
     </section>
 
     <!-- Footer -->
