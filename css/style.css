@@ -10,9 +10,8 @@ footer {
     margin-top: 50px;
 }
 .card-img-top {
-    height: 350px;
+    width: 100%;
     object-fit: contain;
-    background-color: #f8f9fa;
 }
 body {
     font-family: Arial, sans-serif;
