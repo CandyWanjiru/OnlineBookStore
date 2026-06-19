@@ -1,157 +1,32 @@
-body {
-    font-family: Arial, sans-serif;
-}
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@1,700&display=swap');
 
-.hero {
-    min-height: 70vh;
-}
-
-footer {
-    margin-top: 50px;
-}
-.card-img-top {
-    width: 100%;
-    object-fit: contain;
-}
-body {
-    font-family: Arial, sans-serif;
-}
-
-.card img {
-    height: 300px;
-    object-fit: cover;
-}
-
-footer {
-    margin-top: 50px;
-}
-.card-img-top {
-    height: 350px;
-    object-fit: cover;
-}
-.dark-mode {
-    background-color: #121212;
-    color: white;
-}
-
-.dark-mode .card {
-    background-color: #1e1e1e;
-    color: white;
-}
-
-.dark-mode footer {
-    background-color: #000;
-
-}
-body {
-    font-family: Arial, sans-serif;
-}
-
-.card-img-top {
-    height: 350px;
-    object-fit: cover;
-}
-
-.card {
-    transition: transform 0.3s;
-}
-
-.card:hover {
-    transform: scale(1.03);
-}
-
-.hero {
-    min-height: 70vh;
-}
-
-footer {
-    margin-top: 50px;
-}
-
-.dark-mode {
-    background-color: #121212;
-    color: white;
-}
-
-.dark-mode .card {
-    background-color: #1e1e1e;
-    color: white;
-}
-
-.dark-mode .navbar {
-    background-color: #000 !important;
-}
-
-.dark-mode footer {
-    background-color: #000;
-}
-.carousel-item img {
-    object-fit: cover;
-}
-
-@media (max-width: 768px) {
-
-    .carousel-item img {
-        height: 300px;
-    }
-
-    h1 {
-        font-size: 2rem;
-    }
-
-    h2 {
-        font-size: 1.7rem;
-    }
-}
-#topBtn {
-    position: fixed;
-    bottom: 20px;
-    right: 20px;
-    display: none;
-}
-.btn {
-    transition: 0.3s;
-}
-
-.btn:hover {
-    transform: scale(1.05);
-}
-.carousel-item img {
-    height: 500px;
-    object-fit: cover;
-    border-radius: 10px;
-}
-.testimonials {
-    background-image: url("../images/background1.jpg");
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
-    padding: 80px 0;
-}
-.testimonials .card {
-    background-color: rgb(255, 254, 254);
-    border: none;
-}
-.custom-navbar {
+.custom-navbar, 
+nav.navbar, 
+.navbar.navbar-expand-lg {
     background-color: #5c0618 !important;
     background-image: none !important;
     padding: 12px 0;
 }
 
-.custom-navbar .nav-link {
+.custom-navbar .nav-link,
+nav.navbar .nav-link {
     color: rgba(255, 255, 255, 0.8) !important;
 }
 
 .custom-navbar .nav-link.active, 
-.custom-navbar .nav-link:hover {
+.custom-navbar .nav-link:hover,
+nav.navbar .nav-link.active,
+nav.navbar .nav-link:hover {
     color: #ffffff !important;
 }
 
-.custom-navbar .navbar-brand {
+.custom-navbar .navbar-brand,
+nav.navbar .navbar-brand {
     color: #ffffff !important;
 }
 
-.custom-footer {
+.custom-footer,
+footer {
     background-color: #5c0618 !important;
     background-image: none !important;
 }
@@ -161,6 +36,30 @@ footer {
 }
 
 .testimonials .card h5 {
+    text-decoration: underline !important;
+}
+
+.about-page {
+    background-image: url('../images/background2.jpg') !important;
+    background-size: cover !important;
+    background-position: center !important;
+    background-attachment: fixed !important;
+    background-repeat: no-repeat !important;
+}
+
+.script-font {
+    font-family: 'Playfair Display', serif !important;
+    font-style: italic !important;
+    font-weight: 700 !important;
+}
+
+.team-card {
+    border: 1px solid #000000 !important;
+    border-radius: 4px !important;
+    background-color: #ffffff !important;
+}
+
+.team-card h5 {
     text-decoration: underline !important;
 }
 
