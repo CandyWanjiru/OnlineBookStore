@@ -85,3 +85,21 @@ footer {
 .dark-mode footer {
     background-color: #000;
 }
+.carousel-item img {
+    object-fit: cover;
+}
+
+@media (max-width: 768px) {
+
+    .carousel-item img {
+        height: 300px;
+    }
+
+    h1 {
+        font-size: 2rem;
+    }
+
+    h2 {
+        font-size: 1.7rem;
+    }
+}
