@@ -9,9 +9,10 @@ body {
 footer {
     margin-top: 50px;
 }
-.card img {
-    height: 300px;
-    object-fit: cover;
+.card-img-top {
+    height: 350px;
+    object-fit: contain;
+    background-color: #f8f9fa;
 }
 body {
     font-family: Arial, sans-serif;
