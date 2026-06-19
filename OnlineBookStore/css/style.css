@@ -151,6 +151,11 @@ footer {
     color: #ffffff !important;
 }
 
+.custom-footer {
+    background-color: #5c0618 !important;
+    background-image: none !important;
+}
+
 .book-img-container {
     height: 350px;
     overflow: hidden;
