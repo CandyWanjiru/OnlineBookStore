@@ -113,17 +113,22 @@ footer {
 .team-card {
     border: 1px solid #000000 !important;
     border-radius: 4px !important;
-    background-color: rgba(255, 255, 255, 0.9) !important;
+    background-color: rgba(0, 0, 0, 0.75) !important; /* Faded black background */
+    color: #ffffff !important; /* Keeps text clearly visible */
 }
 
 .team-card h5 {
     text-decoration: underline !important;
 }
 
+.team-card .text-muted {
+    color: rgba(255, 255, 255, 0.7) !important; /* Brightens muted subheaders */
+}
+
 .book-img-container {
     height: 350px;
     overflow: hidden;
-    background-color: #f8f9fa;
+    background-color: rgba(255, 255, 255, 0.15); /* Slightly tints image tray for contrast */
     display: flex;
     align-items: center;
     justify-content: center;
