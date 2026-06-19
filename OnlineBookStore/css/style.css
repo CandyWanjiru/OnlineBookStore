@@ -128,3 +128,7 @@ footer {
     background-repeat: no-repeat;
     padding: 80px 0;
 }
+.testimonials .card {
+    background-color: rgb(255, 254, 254);
+    border: none;
+}
