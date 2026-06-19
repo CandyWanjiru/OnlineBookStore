@@ -132,3 +132,42 @@ footer {
     background-color: rgb(255, 254, 254);
     border: none;
 }
+.custom-navbar {
+    background-color: #5c0618 !important;
+    background-image: none !important;
+    padding: 12px 0;
+}
+
+.custom-navbar .nav-link {
+    color: rgba(255, 255, 255, 0.8) !important;
+}
+
+.custom-navbar .nav-link.active, 
+.custom-navbar .nav-link:hover {
+    color: #ffffff !important;
+}
+
+.custom-navbar .navbar-brand {
+    color: #ffffff !important;
+}
+
+.book-img-container {
+    height: 350px;
+    overflow: hidden;
+    background-color: #f8f9fa;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.book-cover {
+    width: auto;
+    height: 100%;
+    object-fit: contain;
+    transition: transform 0.3s ease;
+    padding: 15px;
+}
+
+.card:hover .book-cover {
+    transform: scale(1.04);
+}
