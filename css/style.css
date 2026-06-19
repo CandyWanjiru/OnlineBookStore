@@ -41,4 +41,47 @@ footer {
 
 .dark-mode footer {
     background-color: #000;
+
+}
+body {
+    font-family: Arial, sans-serif;
+}
+
+.card-img-top {
+    height: 350px;
+    object-fit: cover;
+}
+
+.card {
+    transition: transform 0.3s;
+}
+
+.card:hover {
+    transform: scale(1.03);
+}
+
+.hero {
+    min-height: 70vh;
+}
+
+footer {
+    margin-top: 50px;
+}
+
+.dark-mode {
+    background-color: #121212;
+    color: white;
+}
+
+.dark-mode .card {
+    background-color: #1e1e1e;
+    color: white;
+}
+
+.dark-mode .navbar {
+    background-color: #000 !important;
+}
+
+.dark-mode footer {
+    background-color: #000;
 }
