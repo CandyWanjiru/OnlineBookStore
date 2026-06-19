@@ -116,3 +116,8 @@ footer {
 .btn:hover {
     transform: scale(1.05);
 }
+.carousel-item img {
+    height: 500px;
+    object-fit: cover;
+    border-radius: 10px;
+}
