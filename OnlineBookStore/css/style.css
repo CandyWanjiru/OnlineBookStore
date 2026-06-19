@@ -92,6 +92,14 @@ footer {
     background-repeat: no-repeat !important;
 }
 
+.books-page {
+    background-image: url('../images/booksbackground.jpg') !important;
+    background-size: cover !important;
+    background-position: center !important;
+    background-attachment: fixed !important;
+    background-repeat: no-repeat !important;
+}
+
 .script-font {
     font-family: 'Playfair Display', serif !important;
     font-style: italic !important;
