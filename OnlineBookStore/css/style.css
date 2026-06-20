@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 @import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@1,700&display=swap');
 
 .custom-navbar, 
@@ -398,4 +399,139 @@ footer {
 }
 body.dark-theme .book-price-tag {
     color: #ffffff !important;
+=======
+body {
+    font-family: Arial, sans-serif;
+}
+
+.hero {
+    min-height: 70vh;
+}
+
+footer {
+    margin-top: 50px;
+}
+.card-img-top {
+    width: 100%;
+    object-fit: contain;
+}
+body {
+    font-family: Arial, sans-serif;
+}
+
+.card img {
+    height: 300px;
+    object-fit: cover;
+}
+
+footer {
+    margin-top: 50px;
+}
+.card-img-top {
+    height: 350px;
+    object-fit: cover;
+}
+.dark-mode {
+    background-color: #121212;
+    color: white;
+}
+
+.dark-mode .card {
+    background-color: #1e1e1e;
+    color: white;
+}
+
+.dark-mode footer {
+    background-color: #000;
+
+}
+body {
+    font-family: Arial, sans-serif;
+}
+
+.card-img-top {
+    height: 350px;
+    object-fit: cover;
+}
+
+.card {
+    transition: transform 0.3s;
+}
+
+.card:hover {
+    transform: scale(1.03);
+}
+
+.hero {
+    min-height: 70vh;
+}
+
+footer {
+    margin-top: 50px;
+}
+
+.dark-mode {
+    background-color: #121212;
+    color: white;
+}
+
+.dark-mode .card {
+    background-color: #1e1e1e;
+    color: white;
+}
+
+.dark-mode .navbar {
+    background-color: #000 !important;
+}
+
+.dark-mode footer {
+    background-color: #000;
+}
+.carousel-item img {
+    object-fit: cover;
+}
+
+@media (max-width: 768px) {
+
+    .carousel-item img {
+        height: 300px;
+    }
+
+    h1 {
+        font-size: 2rem;
+    }
+
+    h2 {
+        font-size: 1.7rem;
+    }
+}
+#topBtn {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    display: none;
+}
+.btn {
+    transition: 0.3s;
+}
+
+.btn:hover {
+    transform: scale(1.05);
+}
+.carousel-item img {
+    height: 500px;
+    object-fit: cover;
+    border-radius: 10px;
+}
+.testimonials {
+    background-image: url("../images/background1.jpg");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    padding: 80px 0;
+}
+.testimonials .card {
+    background-color: rgb(255, 254, 254);
+    border: none;
+>>>>>>> 4d75370033993493267c7af212467c8ab4c37ac4
 }
