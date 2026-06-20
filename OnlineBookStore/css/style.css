@@ -396,3 +396,6 @@ footer {
     background-image: radial-gradient(#000 1px, transparent 1px);
     background-size: 16px 16px;
 }
+body.dark-theme .book-price-tag {
+    color: #ffffff !important;
+}

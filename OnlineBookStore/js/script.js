@@ -56,9 +56,14 @@ document.addEventListener("DOMContentLoaded", function () {
         if (btn.getAttribute("href") === "#" || !btn.getAttribute("href")) {
             btn.addEventListener("click", function (e) {
                 e.preventDefault();
-                const cardTitleElement = this.closest(".card")?.querySelector(".card-title, h5") || this.closest(".gallery-details-box")?.querySelector(".gallery-title");
+                const parentBox = this.closest(".card") || this.closest(".gallery-details-box");
+                const cardTitleElement = parentBox?.querySelector(".card-title, h5, .gallery-title");
+                const priceElement = parentBox?.querySelector(".book-price-tag");
+                
                 const itemTitle = cardTitleElement ? cardTitleElement.textContent.trim() : "this selection";
-                alert(`Redirecting to purchase framework options for: ${itemTitle} 📚`);
+                const itemPrice = priceElement ? priceElement.textContent.trim() : "Standard Price";
+                
+                alert(`Proceeding to processing options for:\n📚 ${itemTitle}\n💰 Price: ${itemPrice}`);
             });
         }
     });
