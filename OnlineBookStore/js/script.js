@@ -75,51 +75,70 @@ document.addEventListener("DOMContentLoaded", function () {
                 e.stopPropagation();
                 const catTitle = card.querySelector("h5") ? card.querySelector("h5").textContent.trim().toLowerCase() : "";
                 
-                let targetSlug = "";
-                if (catTitle.includes("finance") || catTitle.includes("wealth")) {
-                    targetSlug = "psychology of money";
-                } else if (catTitle.includes("mindset") || catTitle.includes("health") || catTitle.includes("habits")) {
-                    targetSlug = "atomic habits";
-                } else if (catTitle.includes("growth") || catTitle.includes("spiritual") || catTitle.includes("monk")) {
-                    targetSlug = "think like a monk";
-                } else if (catTitle.includes("business") || catTitle.includes("work") || catTitle.includes("deep")) {
-                    targetSlug = "deep work";
-                } else {
-                    targetSlug = "all";
+                let targetSlugs = [];
+                if (catTitle.includes("self help") || catTitle.includes("self-help")) {
+                    targetSlugs = ["7 habits", "atomic habits", "subtle art", "can't hurt me"];
+                } else if (catTitle.includes("finance") || catTitle.includes("wealth")) {
+                    targetSlugs = ["rich dad", "psychology of money"];
+                } else if (catTitle.includes("psychology")) {
+                    targetSlugs = ["think and grow rich"];
+                } else if (catTitle.includes("productivity")) {
+                    targetSlugs = ["deep work"];
+                } else if (catTitle.includes("business")) {
+                    targetSlugs = ["lean"];
+                } else if (catTitle.includes("biography")) {
+                    targetSlugs = ["educated"];
+                } else if (catTitle.includes("fiction")) {
+                    targetSlugs = ["alchemist", "midnight library"];
                 }
 
-                window.location.href = `gallery.html?highlight=${encodeURIComponent(targetSlug)}`;
+                if (targetSlugs.length > 0) {
+                    window.location.href = `gallery.html?highlight=${encodeURIComponent(targetSlugs.join(","))}`;
+                } else {
+                    window.location.href = "gallery.html";
+                }
             });
         });
     });
 
     if (window.location.pathname.includes("gallery.html")) {
         const urlParams = new URLSearchParams(window.location.search);
-        const searchKeyword = urlParams.get("highlight");
+        const searchKeywordsParam = urlParams.get("highlight");
 
-        if (searchKeyword && searchKeyword !== "all") {
+        if (searchKeywordsParam) {
+            const searchKeywords = searchKeywordsParam.split(",");
             const galleryRows = document.querySelectorAll(".gallery-row");
+            let firstScrolled = false;
+
             galleryRows.forEach(row => {
                 const titleEl = row.querySelector(".gallery-title");
-                if (titleEl && titleEl.textContent.toLowerCase().includes(searchKeyword)) {
-                    row.scrollIntoView({ behavior: "smooth", block: "center" });
-                    
-                    const frame = row.querySelector(".gallery-img-frame") || row;
-                    const originalTransition = frame.style.transition;
-                    
-                    frame.style.transition = "all 0.3s ease";
-                    frame.style.boxShadow = "0 0 35px 15px #ffffff";
-                    frame.style.transform = "scale(1.05)";
-                    frame.style.borderColor = "#ffffff";
+                if (titleEl) {
+                    const rowTitleLower = titleEl.textContent.toLowerCase();
+                    const matchFound = searchKeywords.some(keyword => rowTitleLower.includes(keyword.trim().toLowerCase()));
 
-                    setTimeout(() => {
-                        frame.style.boxShadow = "";
-                        frame.style.transform = "";
-                        frame.style.borderColor = "";
+                    if (matchFound) {
+                        if (!firstScrolled) {
+                            row.scrollIntoView({ behavior: "smooth", block: "center" });
+                            firstScrolled = true;
+                        }
+                        
+                        const frame = row.querySelector(".gallery-img-frame") || row;
+                        const originalTransition = frame.style.transition;
+                        
+                        frame.style.transition = "all 0.3s ease";
+                        frame.style.boxShadow = "0 0 35px 15px #ffffff";
+                        frame.style.transform = "scale(1.05)";
+                        frame.style.borderColor = "#ffffff";
+
                         setTimeout(() => {
-                            frame.style.transition = originalTransition;
-                        }, 300);
-                    }, 1000);
+                            frame.style.boxShadow = "";
+                            frame.style.transform = "";
+                            frame.style.borderColor = "";
+                            setTimeout(() => {
+                                frame.style.transition = originalTransition;
+                            }, 300);
+                        }, 1000);
+                    }
                 }
             });
         }
