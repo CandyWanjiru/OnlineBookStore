@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 document.addEventListener("DOMContentLoaded", function () {
     const topBtn = document.getElementById("topBtn");
     if (topBtn) {
