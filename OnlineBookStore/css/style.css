@@ -108,6 +108,15 @@ footer {
     background-repeat: no-repeat !important;
 }
 
+/* Specific styling for the Gallery Page Backdrop */
+.gallery-page {
+    background-image: url('../images/gallerybackground.jpg') !important;
+    background-size: cover !important;
+    background-position: center !important;
+    background-attachment: fixed !important;
+    background-repeat: no-repeat !important;
+}
+
 .script-font {
     font-family: 'Playfair Display', serif !important;
     font-style: italic !important;
@@ -118,16 +127,15 @@ footer {
     box-shadow: 0 4px 6px rgba(0,0,0,0.1);
 }
 
-/* Specific styling for the Books Page Cards (Faded Black) */
 .team-card {
     border: 1px solid #000000 !important;
     border-radius: 4px !important;
-    background-color: rgba(0, 0, 0, 0.75) !important; /* Restored faded black background */
-    color: #ffffff !important; /* White text for legibility */
+    background-color: rgba(0, 0, 0, 0.75) !important;
+    color: #ffffff !important;
 }
 
 .team-card h5 {
-    text-decoration: none !important; /* Removed underline from book titles */
+    text-decoration: none !important;
     color: #ffffff !important;
 }
 
@@ -136,7 +144,6 @@ footer {
     color: rgba(255, 255, 255, 0.7) !important;
 }
 
-/* Specific styling for the Category Page Cards (Faded White) */
 .category-card {
     border: 2px solid #000000 !important;
     border-radius: 6px !important;
@@ -173,4 +180,63 @@ footer {
 
 .card:hover .book-cover {
     transform: scale(1.04);
+}
+
+/* Specific Aesthetic Styling for the Book Gallery layout list elements */
+.gallery-img-frame {
+    display: inline-block;
+    padding: 10px;
+    background: rgba(255, 255, 255, 0.15);
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    border-radius: 8px;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.5);
+    transition: all 0.4s ease;
+}
+
+.gallery-cover {
+    height: 280px;
+    width: auto;
+    object-fit: contain;
+    border-radius: 4px;
+    transition: transform 0.4s ease;
+}
+
+/* Floating animation style triggers on row hover */
+.gallery-row:hover .gallery-img-frame {
+    transform: translateY(-8px);
+    box-shadow: 0 15px 35px rgba(0,0,0,0.6);
+    border-color: #5c0618;
+}
+
+.gallery-details-box {
+    background-color: rgba(255, 255, 255, 0.45) !important; /* Elegant smoky glassmorphic frame */
+    backdrop-filter: blur(5px);
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    transition: background-color 0.3s ease;
+}
+
+.gallery-row:hover .gallery-details-box {
+    background-color: rgba(255, 255, 255, 0.6) !important;
+}
+
+.gallery-title {
+    font-family: 'Playfair Display', serif;
+    font-weight: 700;
+    color: #000000;
+    margin: 0;
+    font-size: 1.8rem;
+    letter-spacing: 0.5px;
+}
+
+.gallery-divider {
+    display: block;
+    width: 60px;
+    height: 3px;
+    background-color: #5c0618; /* Elegant burgundy accent underscore label line */
+    margin-top: 12px;
+    transition: width 0.3s ease;
+}
+
+.gallery-row:hover .gallery-divider {
+    width: 120px;
 }
